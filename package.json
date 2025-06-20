@@ -5,9 +5,9 @@
   "scripts": {
     "start": "expo start",
     "reset-project": "node ./scripts/reset-project.js",
-    "android": "DARK_MODE=media expo start --android",
-    "ios": "DARK_MODE=media expo start --ios",
-    "web": "DARK_MODE=media expo start --web",
+    "android": "cross-env DARK_MODE=media expo start --android",
+    "ios": "cross-env DARK_MODE=media expo start --ios",
+    "web": "cross-env DARK_MODE=media expo start --web",
     "lint": "expo lint"
   },
   "dependencies": {
@@ -77,6 +77,7 @@
   "devDependencies": {
     "@babel/core": "^7.25.2",
     "@types/react": "~19.0.10",
+    "cross-env": "^7.0.3",
     "eslint": "^9.25.0",
     "eslint-config-expo": "~9.2.0",
     "jscodeshift": "^0.15.2",
